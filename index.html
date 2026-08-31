@@ -3,410 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FoodGo — Доставка їжі</title>
-
+    <title>СмачноТут — Швидка доставка їжі</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <!-- Шапка сайту -->
     <header class="header">
-        <div class="container header-content">
-
-            <a href="#" class="logo">
-                🍔 FoodGo
-            </a>
-
+        <div class="container nav-container">
+            <a href="#" class="logo">Смачно<span>Тут</span></a>
             <nav class="nav">
-                <a href="#home">Головна</a>
-                <a href="#menu">Меню</a>
                 <a href="#about">Про нас</a>
+                <a href="#recommend">Рекомендуємо</a>
                 <a href="#contacts">Контакти</a>
             </nav>
-
-            <button class="cart-button" id="cartButton">
-                🛒 Кошик
-                <span id="cartCount">0</span>
-            </button>
-
+            <!-- Головна кнопка меню замість самого списку страв -->
+            <a href="menu.html" class="btn btn-primary">Відкрити меню 🍔</a>
         </div>
     </header>
 
-
-    <!-- Головний блок -->
-    <main>
-
-        <section class="hero" id="home">
-
-            <div class="container hero-content">
-
-                <div class="hero-text">
-                    <span class="hero-label">🚀 Швидка доставка</span>
-
-                    <h1>
-                        Смачна їжа
-                        <span>прямо до тебе!</span>
-                    </h1>
-
-                    <p>
-                        Замовляй улюблені страви з доставкою прямо додому.
-                        Свіжа їжа, швидка доставка та приємні ціни.
-                    </p>
-
-                    <a href="#menu" class="main-button">
-                        Переглянути меню →
-                    </a>
+    <!-- Головний екран (Hero) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Гаряча та смачна їжа з доставкою за 30 хвилин!</h1>
+                <p>Неймовірні смаки, свіжі інгредієнти та швидка кур'єрська доставка прямо до вашого порогу.</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary btn-large">Дивитися меню</a>
+                    <a href="#recommend" class="btn btn-secondary btn-large">Що порекомендуєте?</a>
                 </div>
-
-                <div class="hero-image">
-                    🍕
-                </div>
-
             </div>
-
-        </section>
-
-
-        <!-- Меню -->
-        <section class="menu" id="menu">
-
-            <div class="container">
-
-                <div class="section-title">
-                    <span>НАШЕ МЕНЮ</span>
-                    <h2>Обирай те, що любиш ❤️</h2>
-                </div>
-
-
-                <div class="products">
-
-                    <!-- Піца -->
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            🍕
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Піца
-                            </span>
-
-                            <h3>Пепероні</h3>
-
-                            <p>
-                                Томатний соус, моцарела та багато пепероні.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>249 грн</strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Піца Пепероні"
-                                    data-price="249">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Бургер -->
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            🍔
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Бургери
-                            </span>
-
-                            <h3>Класичний бургер</h3>
-
-                            <p>
-                                Соковита яловичина, сир, салат та соус.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>189 грн</strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Класичний бургер"
-                                    data-price="189">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Роли -->
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            🍣
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Суші
-                            </span>
-
-                            <h3>Сет Філадельфія</h3>
-
-                            <p>
-                                Лосось, вершковий сир, рис та свіжий авокадо.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>329 грн</strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Сет Філадельфія"
-                                    data-price="329">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Паста -->
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            🍝
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Паста
-                            </span>
-
-                            <h3>Паста Карбонара</h3>
-
-                            <p>
-                                Паста, бекон, пармезан та вершковий соус.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>219 грн</strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Паста Карбонара"
-                                    data-price="219">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Картопля -->
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            🍟
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Закуски
-                            </span>
-
-                            <h3>Картопля фрі</h3>
-
-                            <p>
-                                Хрустка картопля з фірмовим соусом.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>99 грн</strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Картопля фрі"
-                                    data-price="99">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Напій -->
-                    <article class="product-card">
-
-                        <div class="product-image">
-                            🥤
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Напої
-                            </span>
-
-                            <h3>Кола</h3>
-
-                            <p>
-                                Холодний освіжаючий напій 0,5 л.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>59 грн</strong>
-
-                                <button
-                                    class="add-button"
-                                    data-name="Кола"
-                                    data-price="59">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=600&q=80" alt="Смачна страва">
             </div>
-
-        </section>
-
-
-        <!-- Про нас -->
-        <section class="about" id="about">
-
-            <div class="container about-content">
-
-                <div>
-                    <span class="section-label">
-                        ПРО FOODGO
-                    </span>
-
-                    <h2>
-                        Ми доставляємо
-                        гарний настрій 🍔
-                    </h2>
-                </div>
-
-                <p>
-                    FoodGo — це сервіс швидкої доставки улюбленої їжі.
-                    Ми працюємо для того, щоб ти міг насолоджуватися
-                    смачними стравами, не виходячи з дому.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Кошик -->
-    <div class="cart-modal" id="cartModal">
-
-        <div class="cart">
-
-            <div class="cart-header">
-                <h2>Ваш кошик 🛒</h2>
-
-                <button id="closeCart">
-                    ✕
-                </button>
-            </div>
-
-            <div id="cartItems" class="cart-items">
-                <p class="empty-cart">
-                    Кошик поки порожній
-                </p>
-            </div>
-
-            <div class="cart-footer">
-
-                <div class="total">
-                    <span>Разом:</span>
-                    <strong id="cartTotal">0 грн</strong>
-                </div>
-
-                <button class="checkout-button" id="checkoutButton">
-                    Оформити замовлення
-                </button>
-
-            </div>
-
         </div>
+    </section>
 
-    </div>
+    <!-- Страва місяця -->
+    <section class="dish-of-the-month container">
+        <div class="section-title">
+            <span class="badge">Ексклюзив</span>
+            <h2>Страва місяця</h2>
+        </div>
+        <div class="dom-card">
+            <div class="dom-image">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Бургер Королівський">
+            </div>
+            <div class="dom-info">
+                <h3>Бургер «Королівський BBQ»</h3>
+                <p>Подвійна порція соковитої яловичини на грилі, карамелізована цибуля, авторський соус та хрусткий бекон у пухкій бріоші.</p>
+                <div class="dom-price">280 грн</div>
+                <a href="menu.html" class="btn btn-primary">Замовити страву місяця</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Рекомендуємо (Хіти продажу) -->
+    <section id="recommend" class="recommendations container">
+        <div class="section-title">
+            <h2>Рекомендуємо спробувати</h2>
+            <p>Наші гості обирають це найчастіше</p>
+        </div>
+        <div class="rec-grid">
+            <div class="rec-card">
+                <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=400&q=80" alt="Піца">
+                <h4>Піца «Пепероні Максі»</h4>
+                <p>Багато моцарели, пікантні ковбаски пепероні та фірмовий томатний соус.</p>
+                <span class="price">320 грн</span>
+            </div>
+            <div class="rec-card">
+<img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=400&q=80" alt="Суші">
+                <h4>Сет «Філадельфія Хіт»</h4>
+                <p>Класичний лосось, вершковий сир, авокадо та ікра тобіко (32 шт).</p>
+                <span class="price">650 грн</span>
+            </div>
+            <div class="rec-card">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Боул">
+                <h4>Поке-боул з лососем</h4>
+                <p>Свіжий рис, авокадо, боби едамаме, норі та слабосолоний лосось.</p>
+                <span class="price">290 грн</span>
+            </div>
+        </div>
+        <div class="center-btn">
+            <a href="menu.html" class="btn btn-secondary">Перейти до повного каталогу</a>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer id="contacts">
+    <!-- Переваги -->
+    <section class="features">
+        <div class="container features-grid">
+            <div class="feature-item">
+                <h3>⚡ Швидко</h3>
+                <p>Доставка від 30 хвилин у будь-який район міста.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🔥 Гаряче</h3>
+                <p>Використовуємо спеціальні термосумки для збереження температури.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🌿 Свіжо</h3>
+                <p>Готуємо виключно після замовлення з фермерських продуктів.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Підвал -->
+    <footer id="contacts" class="footer">
         <div class="container footer-content">
-
-            <div>
-                <div class="logo">
-                    🍔 FoodGo
-                </div>
-
-                <p>
-                    Смачна їжа — швидка доставка.
-                </p>
-            </div>
-
-            <div>
-                <h3>Контакти</h3>
-                <p>📞 +380 00 000 00 00</p>
-                <p>📧 foodgo@example.com</p>
-            </div>
-
+            <div class="footer-logo">Смачно<span>Тут</span></div>
+            <p>Телефон доставки: +38 (099) 123-45-67</p>
+            <p>© 2026 СмачноТут. Усі права захищені.</p>
         </div>
-
-        <div class="copyright">
-            © 2026 FoodGo. Всі права захищені.
-        </div>
-
     </footer>
-
-
-    <script src="script.js"></script>
 
 </body>
 </html>
