@@ -75,10 +75,71 @@
         </article>
 
 
+<article class="product-card">
+
+            <div class="product-image">
+                <img src="./images/Pizza.avif">
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Піца 
+                </span>
+
+                <h3>«Пепероні Максі»</h3>
+
+                <p>
+                    Багато моцарели, пікантні ковбаски пепероні та фірмовий томатний соус.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>249 грн</strong>
+
+                    <button class="add-button" data-name="Піца «Пепероні Максі»" data-price="249">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
 
 
+<!-- Піца -->
+        <article class="product-card">
 
+            <div class="product-image">
+                <img src="./images/CheesePizza.jpg">
+            </div>
 
+            <div class="product-info">
+
+                <span class="product-category">
+                    Піца
+                </span>
+
+                <h3>Чотири сири</h3>
+
+                <p>
+                    Паста з поєднанням чотирьох вишуканих сирів: моцарели, дорблю, чеддеру та пармезану у ніжному вершковому соусі.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>219 грн</strong>
+
+                    <button class="add-button" data-name="Паста Карбонара" data-price="219">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
 
         <!-- Паста -->
         <article class="product-card">
@@ -146,13 +207,18 @@
             </div>
 
         </article>
+        
 
+
+    </div>
+
+<h2>Напої</h2>
 
         <!-- Напій -->
         <article class="product-card">
 
             <div class="product-image">
-                🥤
+                <img src="./images/CocaCola.jpg">
             </div>
 
             <div class="product-info">
@@ -180,10 +246,6 @@
             </div>
 
         </article>
-
-
-
-    </div>
 
     <h2>Бургери</h2>
     <div class="products">
@@ -340,7 +402,35 @@
 
             </div>
         </article>
-        <script src="Menu.js"></script>
+    
+
+<!-- Кошик -->
+
+<div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+        <div class="cart-header">
+            <h2>Ваш кошик 🛒</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Кошик поки порожній</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-wrapper">
+                <span>Разом до сплати:</span>
+                <strong id="cartTotal">0 грн</strong>
+            </div>
+            <button class="checkout-button" id="checkoutButton">Оформити замовлення</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="Menu.js"></script>
 </body>
 
 </html>
