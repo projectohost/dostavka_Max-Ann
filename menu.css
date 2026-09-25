@@ -5,71 +5,85 @@ body {
 }
 
 .menuContent {
+    position: relative;
+    background-color: #2b1712;
     background-image: url('./images/food-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-}
-
-/* Header */
-
-.header {
-    background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-content {
-    min-height: 80px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    min-height: 320px;
+    padding: 70px 20px;
 }
 
-.logo {
-    color: #ff4757;
-    font-size: 25px;
+.menuContent::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 10, 8, 0.5) 0%, rgba(20, 10, 8, 0.75) 100%);
+}
+
+.menu-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.menuContent span {
+    display: inline-block;
+    color: #ffb199;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.menuContent h2 {
+    font-size: clamp(28px, 5vw, 44px);
     font-weight: 800;
-    text-decoration: none;
+    margin-bottom: 14px;
 }
 
-.nav {
-    display: flex;
-    gap: 30px;
+.menuContent p {
+    font-size: 18px;
+    color: #f5e9e4;
+    max-width: 480px;
+    margin: 0 auto;
 }
 
-.nav a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.2s;
+/* Category headings ("Піцци", "Бургери" ...) */
+
+.menu-body {
+    padding: 60px 0 80px;
 }
 
-.nav a:hover {
-    color: #ff4757;
+.menu-category-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #222;
+    margin: 55px 0 25px;
 }
 
-.cart-button {
-    border: none;
+.menu-category-title:first-child {
+    margin-top: 0;
+}
+
+.menu-category-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
     background: #ff4757;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 2px;
 }
 
-.cart-button span {
-    background: white;
-    color: #ff4757;
-    padding: 2px 7px;
-    border-radius: 50%;
-    margin-left: 5px;
-}
+/* .header, .header-content, .logo, .nav, .nav a and .cart-button now
+   live in common.css so index.html and menu.html share one navigation. */
 
 /* Menu */
 
@@ -101,7 +115,7 @@ body {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 25px;
 }
 
@@ -111,7 +125,6 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     transition: 0.3s;
-    width: 400px;
 }
 
 .product-card:hover {
@@ -377,4 +390,34 @@ body {
     color: #666;
     line-height: 1.6;
     font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
+    .menuContent {
+        min-height: 260px;
+        padding: 50px 20px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-image {
+        height: 220px;
+    }
+
+    .menu-category-title {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .menu-body {
+        padding: 40px 0 60px;
+    }
 }

@@ -1,0 +1,148 @@
+/* =========================================================
+   SHARED ACROSS PAGES — same header/nav and base buttons
+   on every page. Load this before the page's own stylesheet.
+========================================================= */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 30px;
+    min-height: 80px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo span {
+    color: #ff4757;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #ff4757;
+    border-bottom-color: #ff4757;
+}
+
+/* ---------- Buttons (used in the header and across pages) ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff4757;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #ff6b81;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ff4757;
+    border: 2px solid #ff4757;
+}
+
+.btn-secondary:hover {
+    background-color: #ff4757;
+    color: white;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+/* Cart trigger shown in the header on the menu page */
+
+.cart-button {
+    border: none;
+    background: #ff4757;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.cart-button:hover {
+    background: #e03e4d;
+}
+
+.cart-button span {
+    background: white;
+    color: #ff4757;
+    padding: 2px 7px;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+/* ---------- Responsive header ---------- */
+
+@media (max-width: 760px) {
+    .header-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+}
